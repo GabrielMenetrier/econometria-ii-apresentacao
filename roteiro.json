@@ -1,0 +1,38 @@
+{
+  "resumos": [
+    "Descrever as duas séries, comparar suas transformações e respeitar as unidades distintas.",
+    "Usar FAC e FACP para identificar persistência, possível raiz unitária e sazonalidade.",
+    "Comparar o padrão médio dos meses do ano antes e depois do ajuste sazonal.",
+    "Escolher d e propor pelo menos três ARIMA não sazonais para HOUST.",
+    "Estimar os candidatos e comparar coeficientes, incerteza, AIC e BIC em condições iguais.",
+    "Verificar raízes AR e MA, estacionariedade, invertibilidade e possível cancelamento.",
+    "Testar autocorrelação e ARCH nos resíduos e revisar o modelo se necessário.",
+    "Comparar seleção manual e automática, observando a eventual inclusão de sazonalidade.",
+    "Propor, estimar e diagnosticar SARIMA para a série bruta; escolher um candidato.",
+    "Produzir previsões de um passo com janela expansível e medir os erros.",
+    "Colocar as duas previsões na mesma unidade e comparar com 2025, incluindo intervalos.",
+    "Recomendar ao comitê um modelo e deixar claras as limitações.",
+    "Descrever os log-retornos do S&P 500 e testar dependência na variância.",
+    "Justificar o EGARCH, percorrer os diagnósticos e testar assimetria.",
+    "Comparar GARCH e EGARCH, sobretudo a persistência estimada da volatilidade.",
+    "Prever 15 pregões de volatilidade e discutir o uso dos modelos na proteção."
+  ],
+  "falas": [
+    "A bruta mostra sazonalidade mais forte. Os níveis têm unidades diferentes; comparar diferenças do log elimina uma constante de escala. O log, sozinho, não retira sazonalidade.",
+    "FAC lenta nos logs sugere persistência, sem provar raiz unitária. Os picos em 12 meses são mais fortes na bruta. FAC e FACP orientam a escolha, mas não alteram raízes.",
+    "O perfil bruto sobe no meio do ano. Após o ajuste, fica quase plano: amplitude de 32,56 para 2,81 p.p. Isso não elimina ciclo nem risco.",
+    "Usamos uma diferença de HOUST em nível. A dependência inicial motiva candidatos AR e MA. Depois, somamos as diferenças previstas ao último nível observado.",
+    "O (0,1,1) sem drift vence a comparação inicial. AIC e BIC só são comparáveis porque usamos a mesma transformação e amostra. Menor critério não garante bom diagnóstico.",
+    "A raiz MA está fora do círculo, logo o MA é invertível. A raiz em 1 vem da diferenciação: o nível é integrado. Não há par AR/MA para cancelamento.",
+    "Q em 24 meses e ARCH rejeitam. Testamos 24 alternativas e nenhuma passou em tudo. Mantivemos o modelo apenas como benchmark, declarando suas falhas.",
+    "O automático não sazonal confirma a escolha. Com sazonalidade, melhora os critérios, mas ainda reprova testes. A questão pede modelo principal não sazonal e permite essa comparação.",
+    "O SARIMA escolhido melhora o diagnóstico da média: Q não rejeita em 12, 24 e 36. Porém ARCH permanece, e a escolha das diferenças ainda exige cautela.",
+    "A janela cresce e mantém o início em 1994. São 131 previsões. As ordens escolhidas até 2024 usam informação posterior às primeiras origens, uma limitação do exercício.",
+    "Comparamos tudo contra HOUSTNSA. A rota ajustada exige dividir por 12 e recompor o fator mensal. O SARIMA erra menos; os intervalos ainda omitem fontes de incerteza.",
+    "Recomendamos SARIMA como benchmark do total mensal bruto pelo menor erro. A recomendação é condicionada às ressalvas de ARCH, diferenciação e seleção histórica.",
+    "Os grandes movimentos se agrupam. O teste ARCH rejeita fortemente variância sem dependência temporal. Isso justifica modelar volatilidade, sem implicar previsão do sinal do retorno.",
+    "Gamma negativo indica maior impacto de choques negativos. O EGARCH melhora o ajuste e os testes usuais, mas restam ressalvas de cauda e sensibilidade do teste de assimetria.",
+    "Ambos têm persistência elevada. No GARCH ela se refere à variância; no EGARCH, à log-variância. Portanto as meias-vidas não medem exatamente a mesma grandeza.",
+    "As curvas mostram medianas e quantis. No EGARCH-t estimado, a variância esperada futura não é finita a partir de dois passos. Para essa medida de risco, usamos GARCH como referência."
+  ]
+}
