@@ -1,28 +1,41 @@
-# Econometria II — apresentação
+# Econometria II — apresentação revisada
 
-[**Abrir apresentação em PDF (32 slides)**](Apresentacao_Econometria_II.pdf)
+[**Abrir a apresentação em PDF**](Apresentacao_Econometria_II.pdf)
 
-Material de apoio para apresentação do trabalho de Econometria II sobre previsão da construção residencial americana com ARIMA/SARIMA e volatilidade do S&P 500 com GARCH/EGARCH.
+54 slides: 16 perguntas, seguidas pelas respostas com gráficos, tabelas e lembretes discretos no rodapé. Fontes Latin Modern, da família tradicional do LaTeX.
 
-Os slides estão organizados em 16 pares de pergunta e resposta. Cada pergunta tem um resumo; cada resposta inclui uma breve sugestão de fala no rodapé. A tipografia utiliza Latin Modern, da família tradicional do LaTeX.
+## O que foi corrigido
+
+- Inclusão de seasonal subseries plots de HOUSTNSA e HOUST: 12 painéis por série, com observações de cada mês ao longo dos anos e sua média.
+- Estatísticas descritivas das duas séries em nível e primeira diferença do log.
+- FAC/FACP de todas as transformações pedidas, com 48 defasagens e bandas de referência.
+- Comparação completa de 12 ARIMA, incluindo coeficientes, erros-padrão, estatísticas t, variância e AIC/BIC; a tabela continua em três slides.
+- Estatísticas Q e ARCH, caminho de reidentificação, identificação SARIMA e diagnósticos dos candidatos.
+- Equações, estimação, seleção e etapas de diagnóstico EGARCH/GARCH; tabela dos 15 pregões previstos.
+- Remoção do rótulo dos lembretes de apresentação e ampliação moderada do texto.
 
 ## Arquivos
 
-- `Apresentacao_Econometria_II.pdf`: apresentação final.
-- `apresentacao.tex`: fonte LaTeX completo, com gráficos vetoriais e tabelas.
-- `roteiro.json`: resumos das perguntas e sugestões de fala.
+- [PDF](Apresentacao_Econometria_II.pdf): versão atual da apresentação.
+- [LaTeX](apresentacao.tex): fonte autocontido, com gráficos vetoriais e tabelas.
+- [Roteiro](roteiro.json): lembretes por slide.
+- [Auditoria por item](AUDITORIA.md): mapa das questões, slides e ressalvas metodológicas.
+- [Códigos, bases e resultados](Materiais_Econometria.zip): cópia dos dados utilizados, scripts analíticos e resultados numéricos para conferência.
 
-## Compilar
-
-Com Tectonic instalado, execute:
+## Compilar o PDF
 
 ```sh
 tectonic apresentacao.tex
 ```
 
-O resultado será `apresentacao.pdf`. O fonte contém os dados utilizados nos gráficos e não depende de imagens externas. A primeira compilação pode precisar de acesso à internet para baixar pacotes LaTeX.
+O resultado é `apresentacao.pdf`. O fonte contém os dados dos gráficos e não depende de imagens externas. A primeira compilação pode baixar pacotes LaTeX.
 
-## Escopo
+## Como apresentar
 
-Esta é uma apresentação acadêmica resumida, destinada à discussão em grupo. As ressalvas metodológicas e limitações dos modelos constam dos slides e do roteiro. O repositório contém o material de apresentação; não inclui o pipeline completo de estimação.
+Os slides de pergunta servem como transições rápidas. Nas tabelas continuadas e de apoio, destacar o resultado principal em vez de ler cada linha. A inclusão do material necessário aumentou o número de slides; o tempo depende do ensaio e da seleção dos detalhes a comentar.
 
+## Limitações importantes
+
+O ARIMA permanece um benchmark com falhas residuais; o SARIMA ainda apresenta ARCH. A avaliação recursiva é condicional às ordens escolhidas com dados até 2024 e não representa seleção histórica estritamente fora da amostra nas primeiras origens. Os intervalos e o EGARCH-t têm limitações explicitadas na apresentação e na auditoria. Incluir resultados adicionais não elimina essas limitações.
+
+Fontes: FRED (HOUSTNSA e HOUST) e Yahoo Finance (^GSPC). Material acadêmico de apoio à apresentação.
