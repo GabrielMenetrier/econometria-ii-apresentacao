@@ -2,7 +2,7 @@
 
 [Abrir o PDF](Apresentacao_Econometria_II.pdf) · [Fonte LaTeX](apresentacao.tex)
 
-55 slides: 16 perguntas, seguidas das respostas com gráficos, tabelas e lembretes no rodapé. Fontes Latin Modern. Material de apoio para o grupo.
+54 slides: 16 perguntas, seguidas das respostas com gráficos, tabelas e lembretes no rodapé. Fontes Latin Modern. Material de apoio para o grupo.
 
 ## Correções de setembro
 
@@ -10,8 +10,8 @@
 - Slides 5–7: identificação explícita de HOUSTNSA (h) e HOUST (s).
 - Slides 9–10: seasonal subseries plots em faixa única; slide 11: perfil sazonal médio relativo.
 - Slide 15: seis ordens ARIMA sem drift; observação sobre os testes com drift, que pioraram AIC/BIC. Slide 16: conferência da variância e dos critérios.
-- Slide 18: círculo com apenas raízes inversas ARMA; a raiz de integração permanece no modelo, mas não no desenho.
-- Slide 25: explicação do operador B.
+- Slide 17: círculo com apenas raízes inversas ARMA; a raiz de integração permanece no modelo, mas não no desenho.
+- Slide 24: explicação do operador B.
 - Slides 31–39: origem corrigida para 2025M1, reestimação expansível e previsões de um passo. Interpretando origem como último mês observado, são 11 alvos (fevereiro–dezembro). Para prever também janeiro, a primeira origem seria 2024M12.
 - Slides 35–36: fórmula e exemplo numérico da ressazonalização com fatores históricos, sem usar fatores futuros.
 
